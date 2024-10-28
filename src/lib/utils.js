@@ -1,11 +1,10 @@
-import { SvelteComponent } from "svelte";
 import { check_outros, group_outros, transition_out } from "svelte/internal";
 import * as svelteTransitions from "svelte/transition";
 
 /**
  * Calls out transitions before destroying the component instance
  * Workaround for https://github.com/sveltejs/svelte/issues/4056
- * @param {SvelteComponent} instance - the svelte component instance
+ * @param instance - the svelte component instance
  */
 export const outroAndDestroy = (instance) => {
   if (instance.$$.fragment && instance.$$.fragment.o) {
