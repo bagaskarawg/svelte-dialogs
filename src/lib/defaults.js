@@ -1,4 +1,4 @@
-import { noop } from "svelte/internal";
+// import { noop } from "svelte/internal";
 import { fade, fly } from "svelte/transition";
 import { default as Alert } from "../components/Alert.svelte";
 import { default as Confirm } from "../components/Confirm.svelte";
@@ -34,10 +34,10 @@ const commonDefaultOptions = {
     },
   },
   //
-  onShow: noop,
-  onShown: noop,
-  onHide: noop,
-  onHidden: noop,
+  onShow: () => {},
+  onShown: () => {},
+  onHide: () => {},
+  onHidden: () => {},
   //
   overlayClass: "dialog__overlay",
   dialogClass: "dialog__container",

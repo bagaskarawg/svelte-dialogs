@@ -1,4 +1,5 @@
-import { check_outros, group_outros, transition_out } from "svelte/internal";
+// TODO: Reimplement
+// import { check_outros, group_outros, transition_out } from "svelte/internal";
 import * as svelteTransitions from "svelte/transition";
 
 /**
@@ -7,15 +8,16 @@ import * as svelteTransitions from "svelte/transition";
  * @param instance - the svelte component instance
  */
 export const outroAndDestroy = (instance) => {
-  if (instance.$$.fragment && instance.$$.fragment.o) {
-    group_outros();
-    transition_out(instance.$$.fragment, 0, 0, () => {
-      instance.$destroy();
-    });
-    check_outros();
-  } else {
-    instance.$destroy();
-  }
+  instance.$destroy();
+  // TODO: Reimplement
+  // if (instance.$$.fragment && instance.$$.fragment.o) {
+    // group_outros();
+    // transition_out(instance.$$.fragment, 0, 0, () => {
+      // instance.$destroy();
+    // });
+    // check_outros();
+  // } else {
+  // }
 };
 
 /**
