@@ -10,6 +10,11 @@
     "url": "https://github.com/bibizio/svelte-dialogs.git"
   },
   "svelte": "src/index.js",
+  "exports": {
+    ".": {
+      "svelte": "./dist/index.js"
+    },
+  },
   "module": "dist/svelte-dialogs.mjs",
   "main": "dist/svelte-dialogs.js",
   "browser": "dist/svelte-dialogs.js",
